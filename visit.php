@@ -38,6 +38,27 @@
         </div>
     </div>
 
+    <section class="team-section reveal" style="margin-top: 80px;">
+        <h2 class="section-header">MEET THE TEAM</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=400&h=400&q=80" alt="Team Member">
+                <h3>Aline M.</h3>
+                <p>Founder & Director</p>
+            </div>
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&h=400&q=80" alt="Team Member">
+                <h3>Jean Paul K.</h3>
+                <p>Head Curator</p>
+            </div>
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&h=400&q=80" alt="Team Member">
+                <h3>Grace U.</h3>
+                <p>Community Manager</p>
+            </div>
+        </div>
+    </section>
+
     <section class="faq-section reveal" style="margin-top: 80px;">
         <h2 class="section-header">FREQUENTLY ASKED QUESTIONS</h2>
         <div class="faq-item">

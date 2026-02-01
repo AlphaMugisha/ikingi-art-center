@@ -60,12 +60,13 @@
             <a href="artwork.php" class="read-more">View Her Work</a>
         </div>
     </div>
+
     <section class="cta-banner reveal">
         <div class="cta-content">
            <h2>BECOME AN IKINGI MEMBER</h2>
            <p>Support local art and get exclusive benefits like priority workshop booking, 10% off all artwork, and invitations to private exhibit openings.</p>
            <div class="cta-buttons">
-               <a href="#" class="btn-join btn-large">JOIN COMMUNITY ($5/mo)</a>
+               <a href="#" class="btn-join btn-large">JOIN COMMUNITY</a>
                <a href="#" class="btn-outline">LEARN MORE</a>
            </div>
         </div>
@@ -92,7 +93,7 @@
                 ['name' => 'Rwanda Tours', 'color' => '2196f3'], ['name' => 'Design Lab', 'color' => '4caf50'],
                 ['name' => 'Eco Vibe', 'color' => '795548']
             ];
-            for($i=0; $i<4; $i++) { // Loop 4 times to ensure enough length for smooth scroll
+            for($i=0; $i<4; $i++) { 
                 foreach ($sponsors as $s) {
                     echo "<div class='slide'><img src='https://placehold.co/200x80/f0f0f0/{$s['color']}?text={$s['name']}'></div>";
                 }

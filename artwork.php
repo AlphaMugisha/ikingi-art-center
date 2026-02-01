@@ -11,6 +11,14 @@
         <p style="font-weight: bold; margin-top: 10px;">- Jean Paul, Head Curator</p>
     </div>
 
+    <div class="filter-container reveal">
+        <button class="filter-btn active">All Art</button>
+        <button class="filter-btn">Paintings</button>
+        <button class="filter-btn">Sculpture</button>
+        <button class="filter-btn">Textile & Weaving</button>
+        <button class="filter-btn">Photography</button>
+    </div>
+
     <section class="gallery-dark reveal" style="border-radius: 10px;">
         <div class="artwork-grid">
             <?php

@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <?php echo date("Y"); ?> Ikingi Arts Space. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+            <p>&copy; <?php echo date("Y"); ?> Ikingi Arts Space. All Rights Reserved.</p>
         </div>
     </footer>
 
