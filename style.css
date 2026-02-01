@@ -266,3 +266,40 @@ footer { background: #111; color: #777; text-align: center; padding: 30px; font-
         transform: translateX(calc(-250px * 7)); /* Move left by the width of the ORIGINAL set of slides */
     }
 }
+/* --- SUB-PAGE HEADER (Smaller Banner) --- */
+.sub-header {
+    height: 300px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1200');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.sub-header h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+}
+
+/* --- ARTWORK PAGE GRID (Replaces slider on this page) --- */
+.artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive Grid */
+    gap: 30px;
+    padding: 20px;
+}
+/* Ensure art card works in grid without absolute width */
+.artwork-grid .art-card {
+    min-width: auto; 
+    width: 100%;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #666;
+}
