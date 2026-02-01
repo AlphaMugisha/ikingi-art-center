@@ -1,4 +1,4 @@
-/* --- RESET & FONTS --- */
+/* --- KEEP PREVIOUS CSS (RESET, HERO, NAV, ETC) --- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Poppins', sans-serif; color: #333; overflow-x: hidden; }
 
@@ -9,41 +9,20 @@ body { font-family: 'Poppins', sans-serif; color: #333; overflow-x: hidden; }
     --dark-bg: #2b2b2b;
 }
 
-/* --- HEADER --- */
-.navbar {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 15px 50px; background: #fff;
-}
-.logo-text { font-weight: bold; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+/* NAVBAR & HERO Styles (Same as before) */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; background: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.logo-text { font-weight: bold; font-size: 1.2rem; }
 .nav-links a { text-decoration: none; color: #000; margin-left: 20px; font-weight: 600; font-size: 0.9rem; }
-.btn-join {
-    background-color: var(--yellow); padding: 8px 25px; border-radius: 20px; color: #000 !important;
-}
+.btn-join { background-color: var(--yellow); padding: 8px 25px; border-radius: 20px; color: #000 !important; }
 
-/* --- HERO SECTION --- */
-.hero-section {
-    position: relative;
-    height: 500px;
-    /* Updated background image link */
-    background: url('https://images.unsplash.com/photo-1523554888454-84137e72d3ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-    text-align: center;
-    padding-top: 40px;
-}
-.main-title {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 3.5rem; letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    margin-bottom: 20px;
-}
-.text-yellow { color: var(--yellow); }
-.text-green { color: var(--green); }
-.text-red { color: var(--red); }
-
+.hero-section { position: relative; height: 500px; background: url('https://images.unsplash.com/photo-1523554888454-84137e72d3ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat; text-align: center; padding-top: 40px; }
+.main-title { font-family: 'Permanent Marker', cursive; font-size: 3.5rem; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); margin-bottom: 20px; }
+.text-yellow { color: var(--yellow); } .text-green { color: var(--green); } .text-red { color: var(--red); }
 .custom-wave { position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; }
 .custom-wave svg { position: relative; display: block; width: calc(100% + 1.3px); height: 80px; transform: rotate(180deg); }
 .custom-wave .shape-fill { fill: #ffffff; }
 
-/* --- CONTENT BLOCKS --- */
+/* INTRO BLOCKS */
 .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
 .content-block { display: flex; align-items: center; gap: 50px; margin-bottom: 80px; }
 .content-block.reverse { flex-direction: row-reverse; }
@@ -52,20 +31,32 @@ body { font-family: 'Poppins', sans-serif; color: #333; overflow-x: hidden; }
 .text-wrapper h2 { font-size: 1.8rem; margin-bottom: 15px; font-weight: 700; }
 .text-wrapper p { font-size: 0.95rem; color: #666; line-height: 1.6; }
 
-/* --- MOSAIC / QUOTE SECTION --- */
+/* --- NEW: EVENTS SECTION --- */
+.events-section { margin-bottom: 100px; }
+.section-header { text-align: center; font-family: 'Permanent Marker', cursive; font-size: 2.5rem; margin-bottom: 40px; color: #333; }
+.events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+.event-card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); position: relative; transition: transform 0.3s; }
+.event-card:hover { transform: translateY(-5px); }
+.event-card img { width: 100%; height: 200px; object-fit: cover; }
+.event-info { padding: 20px; }
+.event-info h3 { margin-bottom: 10px; font-weight: 700; }
+.event-info p { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
+.link-btn { text-decoration: none; color: var(--red); font-weight: bold; font-size: 0.9rem; }
+
+/* Date Badge on Event Cards */
+.date-badge { position: absolute; top: 15px; left: 15px; background: white; padding: 5px 10px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.date-badge .day { display: block; font-weight: 800; font-size: 1.2rem; color: #333; }
+.date-badge .month { display: block; font-size: 0.7rem; font-weight: bold; color: var(--green); text-transform: uppercase; }
+
+/* MOSAIC SECTION */
 .mosaic-section { margin-bottom: 80px; padding-left: 50px; }
 .basket-wrapper { position: relative; width: 80%; margin-left: auto; }
 .main-basket-img { width: 100%; height: 350px; object-fit: cover; border-radius: 8px; }
-
-.quote-box {
-    position: absolute; bottom: -30px; left: -50px;
-    background-color: var(--yellow); padding: 30px; width: 350px;
-    border-radius: 15px; box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-}
+.quote-box { position: absolute; bottom: -30px; left: -50px; background-color: var(--yellow); padding: 30px; width: 350px; border-radius: 15px; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); }
 .quote-box p { font-weight: 700; font-size: 0.95rem; line-height: 1.5; margin-bottom: 10px; }
-.author { font-weight: 800; font-style: italic; }
 
-/* --- DARK GALLERY SECTION --- */
+/* GALLERY SECTION */
 .gallery-dark { background-color: var(--dark-bg); padding: 60px 0; color: #fff; text-align: center; }
 .gallery-title { font-family: 'Permanent Marker', cursive; font-size: 2.5rem; margin-bottom: 40px; letter-spacing: 1px; }
 .carousel-container { display: flex; justify-content: center; align-items: center; gap: 20px; }
@@ -74,8 +65,21 @@ body { font-family: 'Poppins', sans-serif; color: #333; overflow-x: hidden; }
 .gallery-track { display: flex; transition: transform 0.5s ease-in-out; gap: 20px; }
 .art-card { min-width: 390px; position: relative; }
 .art-card img { width: 100%; height: 350px; object-fit: cover; border: 3px solid #444; border-radius: 8px; }
-.price-tag {
-    position: absolute; top: 15px; right: 15px;
-    background-color: #a4cd6d; color: #000;
-    font-weight: 700; padding: 5px 12px; border-radius: 20px; font-size: 0.9rem;
-}
+.price-tag { position: absolute; top: 15px; right: 15px; background-color: #a4cd6d; color: #000; font-weight: 700; padding: 5px 12px; border-radius: 20px; font-size: 0.9rem; }
+
+/* --- NEW: VISIT & FOOTER --- */
+.visit-section { background: #f9f9f9; padding: 80px 20px; border-top: 5px solid var(--yellow); }
+.visit-container { max-width: 1000px; margin: 0 auto; display: flex; gap: 50px; align-items: center; }
+.visit-info { flex: 1; }
+.visit-info h2 { font-family: 'Permanent Marker', cursive; font-size: 2.5rem; margin-bottom: 20px; }
+.visit-info p { margin-bottom: 20px; line-height: 1.6; }
+
+.newsletter { background: white; padding: 20px; border-radius: 10px; margin-top: 20px; border: 2px dashed #ddd; }
+.newsletter input { width: 60%; padding: 10px; margin-right: 10px; border: 1px solid #ccc; border-radius: 4px; }
+.newsletter button { padding: 10px 20px; background: var(--green); border: none; color: white; font-weight: bold; border-radius: 4px; cursor: pointer; }
+
+.map-placeholder { flex: 1; position: relative; }
+.map-placeholder img { width: 100%; height: 300px; object-fit: cover; border-radius: 10px; filter: grayscale(50%); }
+.map-pin { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--red); color: white; padding: 10px 15px; border-radius: 20px; font-weight: bold; }
+
+footer { background: #111; color: #777; text-align: center; padding: 20px; font-size: 0.8rem; }
