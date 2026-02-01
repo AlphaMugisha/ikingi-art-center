@@ -173,3 +173,96 @@ body { font-family: 'Poppins', sans-serif; color: #333; overflow-x: hidden; scro
 }
 
 footer { background: #111; color: #777; text-align: center; padding: 30px; font-size: 0.9rem; margin-top: 0; }
+
+/* --- SPONSORS SECTION --- */
+.sponsors-section {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+    overflow: hidden; /* Hides the scrollbar */
+}
+
+/* The Container */
+.logo-slider {
+    background: white;
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Limits width so it looks neat */
+    display: flex;
+    align-items: center;
+}
+
+/* THE COOL FADE EFFECT (Gradients on sides) */
+.logo-slider::before,
+.logo-slider::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 150px; /* Width of the fade */
+    z-index: 2;
+}
+
+.logo-slider::before {
+    left: 0;
+    top: 0;
+}
+
+.logo-slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+/* The Moving Track */
+.logo-slide-track {
+    display: flex;
+    width: calc(250px * 14); /* Width of slide * total number of slides (7 real + 7 duplicates) */
+    animation: scroll 30s linear infinite; /* 30s speed - adjust to make faster/slower */
+}
+
+/* Pause animation on hover */
+.logo-slider:hover .logo-slide-track {
+    animation-play-state: paused;
+}
+
+/* Individual Slides */
+.slide {
+    height: 100px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px; /* Gap between logos */
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    
+    /* THE COOL EFFECT: Grayscale to Color */
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.slide img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1); /* Slight pop up */
+}
+
+/* The Animation Keyframes */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7)); /* Move left by the width of the ORIGINAL set of slides */
+    }
+}

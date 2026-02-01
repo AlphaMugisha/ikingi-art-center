@@ -170,6 +170,43 @@
             </div>
         </div>
     </section>
+    <section class="sponsors-section reveal">
+        <h2 class="section-header">OUR PARTNERS & SPONSORS</h2>
+        
+        <div class="logo-slider">
+            <div class="logo-slide-track">
+                
+                <?php 
+                $sponsors = [
+                    ['name' => 'Kigali Art', 'color' => 'e91e63'],
+                    ['name' => 'Culture Hub', 'color' => '9c27b0'],
+                    ['name' => 'Rwanda Tours', 'color' => '2196f3'],
+                    ['name' => 'Design Lab', 'color' => '4caf50'],
+                    ['name' => 'Future Minds', 'color' => 'ff9800'],
+                    ['name' => 'Eco Vibe', 'color' => '795548'],
+                    ['name' => 'Urban Roots', 'color' => '607d8b']
+                ];
+
+                // Function to render logos
+                function renderLogos($list) {
+                    foreach ($list as $sponsor) {
+                        // Using placeholder API to generate "Fake" Logos with specific colors
+                        echo "
+                        <div class='slide'>
+                            <img src='https://placehold.co/200x80/f0f0f0/{$sponsor['color']}?text={$sponsor['name']}' alt='{$sponsor['name']}'>
+                        </div>";
+                    }
+                }
+
+                // Render First Set
+                renderLogos($sponsors);
+                // Render Duplicate Set (Needed for the infinite loop effect)
+                renderLogos($sponsors);
+                ?>
+
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2024 Ikingi Arts Space. All Rights Reserved.</p>
