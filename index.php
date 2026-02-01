@@ -1,49 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikingi Arts Space</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php include 'includes/header.php'; ?>
+
+    <nav class="navbar">
+        <div class="logo">IKINGI ARTS SPACE</div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">Artwork</a>
+            <a href="#">About</a>
+            <a href="#">Programs</a>
+            <a href="#">Contact</a>
+            <button class="join-btn">JOIN NOW</button>
+        </div>
+    </nav>
 
     <section class="hero">
-        <h1>IKINGI ARTS SPACE</h1>
-        <div class="hero-image-container">
-            </div>
+        <div class="hero-content">
+            <h1>IKINGI <span class="green">ARTS</span> <span class="red">SPACE</span></h1>
+            <img src="images/logo_main.png" alt="Logo" class="hero-logo">
+        </div>
+        <div class="wave">
+            <svg viewBox="0 0 1440 320"><path fill="#ffffff" d="M0,224L120,213.3C240,203,480,181,720,186.7C960,192,1200,224,1320,240L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+        </div>
     </section>
 
-    <main class="container">
-        <section class="info-block">
-            <div class="image"><img src="fire-gathering.jpg" alt="Gathering"></div>
-            <div class="text">
+    <section class="info-container">
+        <div class="row">
+            <div class="image-box"><img src="images/fire.jpg"></div>
+            <div class="text-box">
                 <h2>Welcome to ikingi arts space</h2>
-                <p>...</p>
+                <p>Ikingi Arts Space is a creative hub where art, culture, and community come together...</p>
             </div>
-        </section>
+        </div>
 
-        <section class="info-block reverse">
-            <div class="text">
-                <h2>Discover Rwandans History</h2>
-                <p>...</p>
+        <div class="row reverse">
+            <div class="text-box">
+                <h2>Discover Rwandans History through art</h2>
+                <p>Ikingi Arts is a creative space where Rwandan history, culture, and contemporary art come together...</p>
             </div>
-            <div class="image"><img src="gallery-view.jpg" alt="Gallery"></div>
-        </section>
+            <div class="image-box"><img src="images/gallery.jpg"></div>
+        </div>
+    </section>
 
-        <section class="mosaic-section">
-            <div class="quote-box">
-                <p>"Art is not what you see..."</p>
-            </div>
-            <img src="baskets.jpg" class="mosaic-img" alt="Rwandan Art">
-        </section>
-
-        <section class="gallery">
-            <h3>OUR ART PIECES</h3>
-            <div class="carousel">
+    <section class="gallery-section">
+        <h2>OUR ART PIECES</h2>
+        <div class="slider-wrapper">
+            <button class="prev" onclick="slide(-1)">&#10094;</button>
+            <div class="viewport">
+                <div class="track" id="track">
+                    <div class="card">
+                        <img src="images/art1.jpg">
+                        <span class="price">100</span>
+                    </div>
+                    <div class="card">
+                        <img src="images/art2.jpg">
+                        <span class="price">250</span>
+                    </div>
+                    <div class="card">
+                        <img src="images/art3.jpg">
+                        <span class="price">180</span>
+                    </div>
                 </div>
-        </section>
-    </main>
+            </div>
+            <button class="next" onclick="slide(1)">&#10095;</button>
+        </div>
+    </section>
 
-    <?php include 'includes/footer.php'; ?>
     <script src="script.js"></script>
 </body>
 </html>
