@@ -50,12 +50,6 @@
         </div>
     </header>
 
-    <div class="marquee-container">
-        <div class="marquee-content">
-            EXHIBITIONS • WORKSHOPS • LIVE MUSIC • CULTURE • STORYTELLING • ART CLASSES • COMMUNITY • EXHIBITIONS • WORKSHOPS • LIVE MUSIC • CULTURE • STORYTELLING
-        </div>
-    </div>
-
     <main class="container">
         
         <div class="content-block reveal">
