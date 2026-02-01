@@ -60,6 +60,16 @@
             <a href="artwork.php" class="read-more">View Her Work</a>
         </div>
     </div>
+    <section class="cta-banner reveal">
+        <div class="cta-content">
+           <h2>BECOME AN IKINGI MEMBER</h2>
+           <p>Support local art and get exclusive benefits like priority workshop booking, 10% off all artwork, and invitations to private exhibit openings.</p>
+           <div class="cta-buttons">
+               <a href="#" class="btn-join btn-large">JOIN COMMUNITY ($5/mo)</a>
+               <a href="#" class="btn-outline">LEARN MORE</a>
+           </div>
+        </div>
+    </section>
 
     <div class="mosaic-section reveal">
         <div class="basket-wrapper">
