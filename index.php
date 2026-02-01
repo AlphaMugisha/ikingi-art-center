@@ -22,14 +22,23 @@
         </nav>
 
         <div class="hero-section">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="https://videos.pexels.com/video-files/3205915/3205915-hd_1920_1080_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <div class="hero-overlay"></div>
+
             <div class="hero-content">
-                <h1 class="main-title">
+                <h1 class="main-title reveal">
                     <span class="text-yellow">IKINGI</span> 
                     <span class="text-green">ARTS</span> 
                     <span class="text-red">SPACE</span>
                 </h1>
-                <div class="center-logo">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1048/1048927.png" alt="Logo" style="height: 100px; opacity: 0.9;">
+                <p class="hero-subtitle reveal">Where Culture Meets Creativity</p>
+                
+                <div class="center-logo reveal">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1048/1048927.png" alt="Logo">
                 </div>
             </div>
             
@@ -41,71 +50,70 @@
         </div>
     </header>
 
+    <div class="marquee-container">
+        <div class="marquee-content">
+            EXHIBITIONS • WORKSHOPS • LIVE MUSIC • CULTURE • STORYTELLING • ART CLASSES • COMMUNITY • EXHIBITIONS • WORKSHOPS • LIVE MUSIC • CULTURE • STORYTELLING
+        </div>
+    </div>
+
     <main class="container">
         
-        <div class="content-block">
+        <div class="content-block reveal">
             <div class="image-wrapper">
                 <img src="https://images.unsplash.com/photo-1533575770077-052fa2c609fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bonfire">
             </div>
             <div class="text-wrapper">
-                <h2>Welcome to ikingi arts space</h2>
+                <h2>Welcome to Ikingi Arts Space</h2>
                 <p>Ikingi Arts Space is a creative hub where art, culture, and community come together through exhibitions, open mics, and cultural experiences.</p>
+                <a href="#" class="read-more">Read Our Story</a>
             </div>
         </div>
 
-        <div class="content-block reverse">
+        <div class="content-block reverse reveal">
             <div class="text-wrapper">
                 <h2>Discover Rwandan History</h2>
                 <p>We are a space where history, culture, and contemporary art come together through exhibitions, workshops, and storytelling.</p>
+                <a href="#" class="read-more">View Exhibitions</a>
             </div>
             <div class="image-wrapper">
                 <img src="https://images.unsplash.com/photo-1572947650440-e8a97ef053b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gallery Room">
             </div>
         </div>
 
-        <section id="events" class="events-section">
+        <section id="events" class="events-section reveal">
             <h2 class="section-header">WHAT'S ON THIS WEEK</h2>
             <div class="events-grid">
                 <div class="event-card">
-                    <div class="date-badge">
-                        <span class="day">12</span>
-                        <span class="month">NOV</span>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" alt="Painting">
+                    <div class="date-badge"><span class="day">12</span><span class="month">NOV</span></div>
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80">
                     <div class="event-info">
                         <h3>Kids Art Workshop</h3>
-                        <p>A fun afternoon of painting and storytelling for children aged 6-12.</p>
+                        <p>Painting and storytelling for kids.</p>
                         <a href="#" class="link-btn">Book Spot &rarr;</a>
                     </div>
                 </div>
                 <div class="event-card">
-                    <div class="date-badge">
-                        <span class="day">14</span>
-                        <span class="month">NOV</span>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1514525253440-b393452e8d26?auto=format&fit=crop&w=600&q=80" alt="Live Music">
+                    <div class="date-badge"><span class="day">14</span><span class="month">NOV</span></div>
+                    <img src="https://images.unsplash.com/photo-1514525253440-b393452e8d26?auto=format&fit=crop&w=600&q=80">
                     <div class="event-info">
                         <h3>Acoustic Night</h3>
-                        <p>Live traditional and modern fusion music by local bands.</p>
+                        <p>Live traditional fusion music.</p>
                         <a href="#" class="link-btn">Get Tickets &rarr;</a>
                     </div>
                 </div>
                 <div class="event-card">
-                    <div class="date-badge">
-                        <span class="day">18</span>
-                        <span class="month">NOV</span>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1459908676235-d5f02a50184b?auto=format&fit=crop&w=600&q=80" alt="Pottery">
+                    <div class="date-badge"><span class="day">18</span><span class="month">NOV</span></div>
+                    <img src="https://images.unsplash.com/photo-1459908676235-d5f02a50184b?auto=format&fit=crop&w=600&q=80">
                     <div class="event-info">
                         <h3>Pottery Class</h3>
-                        <p>Learn the basics of clay molding with our resident artist.</p>
+                        <p>Learn clay molding basics.</p>
                         <a href="#" class="link-btn">Book Spot &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="mosaic-section">
+        <div class="mosaic-section reveal">
             <div class="basket-wrapper">
                 <img src="https://images.unsplash.com/photo-1596263576926-250c60dae56b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Rwandan Baskets" class="main-basket-img">
                 <div class="quote-box">
@@ -118,8 +126,8 @@
     </main>
 
     <section id="gallery" class="gallery-dark">
-        <h2 class="gallery-title">OUR ART PIECES</h2>
-        <div class="carousel-container">
+        <h2 class="gallery-title reveal">OUR ART PIECES</h2>
+        <div class="carousel-container reveal">
             <button class="nav-arrow" onclick="slide(-1)">&#10094;</button>
             <div class="gallery-viewport">
                 <div class="gallery-track" id="track">
@@ -144,12 +152,12 @@
         </div>
     </section>
 
-    <section id="visit" class="visit-section">
+    <section id="visit" class="visit-section reveal">
         <div class="visit-container">
             <div class="visit-info">
                 <h2>VISIT THE SPACE</h2>
                 <p><strong>Opening Hours:</strong><br>Mon - Sat: 9:00 AM - 8:00 PM<br>Sun: Closed</p>
-                <p><strong>Location:</strong><br>KK 123 St, Kigali, Rwanda<br>Next to the Community Hall</p>
+                <p><strong>Location:</strong><br>KK 123 St, Kigali, Rwanda</p>
                 <div class="newsletter">
                     <h3>Join our Community</h3>
                     <input type="email" placeholder="Enter your email...">
@@ -157,7 +165,7 @@
                 </div>
             </div>
             <div class="map-placeholder">
-                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" alt="Map Location">
+                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80">
                 <div class="map-pin">📍 We are here</div>
             </div>
         </div>
