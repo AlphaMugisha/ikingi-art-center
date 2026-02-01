@@ -67,3 +67,13 @@ faqs.forEach(faq => {
         item.classList.toggle("active");
     });
 });
+// ... (Keep all your existing code above) ...
+
+// 4. Mobile Menu Toggle
+function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    const burger = document.querySelector('.hamburger');
+    
+    nav.classList.toggle('active');
+    burger.classList.toggle('active');
+}

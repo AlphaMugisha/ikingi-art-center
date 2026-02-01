@@ -11,7 +11,14 @@
 
 <nav class="navbar">
     <div class="logo-text">IKINGI ARTS SPACE</div>
-    <div class="nav-links">
+    
+    <div class="hamburger" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <div class="nav-links" id="navLinks">
         <a href="index.php">Home</a>
         <a href="programs.php">Programs</a>
         <a href="artwork.php">Artwork</a>

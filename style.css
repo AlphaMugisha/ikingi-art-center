@@ -516,3 +516,102 @@ footer { background: #111; color: #777; text-align: center; padding: 30px; font-
     .image-wrapper img, .main-basket-img, .quote-box { width: 100%; left: 0; bottom: 0; position: relative; }
     .hero-section { height: 400px; } .main-title { font-size: 2.5rem; }
 }
+/* --- HAMBURGER MENU STYLES (Default Hidden) --- */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #333;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 768px) {
+    
+    /* 1. Mobile Navigation */
+    .hamburger { display: block; } /* Show button */
+    
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .nav-links {
+        position: fixed;
+        left: -100%; /* Hide off-screen */
+        top: 70px; /* Below navbar */
+        gap: 0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+    
+    .nav-links.active { left: 0; } /* Slide in */
+    
+    .nav-links a { margin: 15px 0; display: block; font-size: 1.2rem; }
+    .btn-join { margin: 10px auto; display: inline-block; }
+
+    /* 2. Hero Section */
+    .hero-section { height: 500px; }
+    .main-title { font-size: 2.5rem; letter-spacing: 1px; }
+    .hero-subtitle { font-size: 1.1rem; padding: 0 20px; }
+
+    /* 3. General Layout (Stacking) */
+    .container { padding: 20px; }
+    
+    /* Force columns instead of rows */
+    .content-block, 
+    .content-block.reverse, 
+    .visit-container, 
+    .contact-grid {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    
+    .image-wrapper img, 
+    .map-placeholder img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* 4. Stats Section */
+    .stats-section { flex-direction: column; gap: 30px; }
+    
+    /* 5. Mosaic/Basket Section */
+    .mosaic-section { padding-left: 0; }
+    .basket-wrapper { width: 100%; }
+    .quote-box {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin-top: -30px; /* Slight overlap */
+    }
+
+    /* 6. Text Adjustments */
+    .text-wrapper h2, .section-header { font-size: 1.8rem; }
+    
+    /* 7. Grid Systems (1 Column) */
+    .events-grid, .testimonial-grid, .artwork-grid {
+        grid-template-columns: 1fr; /* Single column */
+    }
+    
+    /* 8. Schedule Table */
+    .schedule-row { flex-direction: column; text-align: center; gap: 10px; }
+    .schedule-row:hover { padding-left: 0; background: #fafafa; }
+    .day { width: 100%; margin-bottom: 5px; }
+
+    /* 9. Slider Adjustments */
+    .gallery-viewport { width: 100%; overflow-x: scroll; } /* Allow swipe */
+    .gallery-track { width: max-content; }
+    .nav-arrow { display: none; } /* Hide arrows on mobile, just swipe */
+}
