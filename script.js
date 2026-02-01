@@ -1,11 +1,18 @@
-// 1. PRELOADER LOGIC
+// 1. PRELOADER LOGIC (Updated for 5-second delay)
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     if (preloader) {
-        preloader.classList.add('fade-out');
+        // This sets a timer for 5000ms (5 seconds)
         setTimeout(() => {
-            preloader.remove();
-        }, 600); // Matches the CSS transition speed
+            // Start the fade-out animation
+            preloader.classList.add('fade-out');
+            
+            // Wait for the animation to finish (0.6s) then delete the element
+            setTimeout(() => {
+                preloader.remove();
+            }, 600); 
+            
+        }, 5000); // <--- CHANGE THIS NUMBER to change the seconds (e.g., 3000 for 3s)
     }
 });
 
@@ -39,13 +46,11 @@ const faqs = document.querySelectorAll(".faq-question");
 
 faqs.forEach(faq => {
     faq.addEventListener("click", () => {
-        // Close other FAQs
         faqs.forEach(otherFaq => {
             if (otherFaq !== faq) {
                 otherFaq.parentElement.classList.remove("active");
             }
         });
-        // Toggle current
         const item = faq.parentElement;
         item.classList.toggle("active");
     });

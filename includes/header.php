@@ -19,7 +19,7 @@
         <div class="paint-drop yellow"></div>
         <div class="paint-drop green"></div>
     </div>
-    <div class="loading-text">IKINGI ARTS SPACE...</div>
+    <div class="loading-text">INKINGI ARTS SPACE...</div>
 </div>
 <nav class="navbar">
     <a href="index.php" class="logo-link">
