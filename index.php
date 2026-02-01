@@ -22,7 +22,7 @@
 
 <div class="marquee-container">
     <div class="marquee-content">
-        EXHIBITIONS • WORKSHOPS • LIVE MUSIC • CULTURE • STORYTELLING • ART CLASSES • EXHIBITIONS • WORKSHOPS • LIVE MUSIC • CULTURE
+        EXHIBITIONS • WORKSHOPS • LIVE MUSIC • CULTURE • STORYTELLING • ART CLASSES • COMMUNITY • EXHIBITIONS • WORKSHOPS • LIVE MUSIC
     </div>
 </div>
 
@@ -34,13 +34,31 @@
             <p>Ikingi Arts Space is a creative hub where art, culture, and community come together through exhibitions, open mics, and cultural experiences.</p>
         </div>
     </div>
+    
+    <div class="stats-section reveal">
+        <div class="stat-item"><h3>500+</h3><p>Artists Supported</p></div>
+        <div class="stat-item"><h3>120</h3><p>Exhibitions Hosted</p></div>
+        <div class="stat-item"><h3>5k+</h3><p>Happy Visitors</p></div>
+    </div>
 
-    <div class="content-block reverse reveal">
+    <div class="content-block reverse reveal" style="margin-top: 80px;">
         <div class="text-wrapper">
             <h2>Discover Rwandan History</h2>
             <p>We are a space where history, culture, and contemporary art come together through exhibitions, workshops, and storytelling.</p>
         </div>
         <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1572947650440-e8a97ef053b2?w=800&q=80"></div>
+    </div>
+    
+    <div class="content-block reveal">
+        <div class="image-wrapper" style="text-align: center;">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400&q=80" style="border-radius: 50%; width: 300px; height: 300px; object-fit: cover;">
+        </div>
+        <div class="text-wrapper">
+            <h4 style="color: var(--yellow); font-weight: bold;">ARTIST OF THE MONTH</h4>
+            <h2>Meet Sarah Uwera</h2>
+            <p>Sarah is a mixed-media artist focusing on the intersection of traditional Rwandan weaving and modern digital art. Her latest collection, "Future Roots," is currently on display.</p>
+            <a href="artwork.php" class="read-more">View Her Work</a>
+        </div>
     </div>
 
     <div class="mosaic-section reveal">
@@ -60,14 +78,11 @@
         <div class="logo-slide-track">
             <?php 
             $sponsors = [
-                ['name' => 'Kigali Art', 'color' => 'e91e63'],
-                ['name' => 'Culture Hub', 'color' => '9c27b0'],
-                ['name' => 'Rwanda Tours', 'color' => '2196f3'],
-                ['name' => 'Design Lab', 'color' => '4caf50'],
+                ['name' => 'Kigali Art', 'color' => 'e91e63'], ['name' => 'Culture Hub', 'color' => '9c27b0'],
+                ['name' => 'Rwanda Tours', 'color' => '2196f3'], ['name' => 'Design Lab', 'color' => '4caf50'],
                 ['name' => 'Eco Vibe', 'color' => '795548']
             ];
-            // Render twice for infinite loop
-            for($i=0; $i<2; $i++) {
+            for($i=0; $i<4; $i++) { // Loop 4 times to ensure enough length for smooth scroll
                 foreach ($sponsors as $s) {
                     echo "<div class='slide'><img src='https://placehold.co/200x80/f0f0f0/{$s['color']}?text={$s['name']}'></div>";
                 }
