@@ -7,7 +7,7 @@ function slide(direction) {
     // Move position
     currentPosition += (direction * -cardWidth);
 
-    // Hard Stop limits (Modify -820 depending on how many items you have)
+    // Hard Stop limits
     if (currentPosition > 0) currentPosition = 0;
     if (currentPosition < -820) currentPosition = -820; 
 

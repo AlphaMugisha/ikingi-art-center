@@ -30,7 +30,7 @@
                     <span class="text-red">SPACE</span>
                 </h1>
                 <div class="center-logo">
-                    <img src="images/logo_center.png" alt="Ikingi Logo" style="height: 100px;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1048/1048927.png" alt="Logo" style="height: 100px; opacity: 0.8;">
                 </div>
             </div>
             
@@ -46,7 +46,7 @@
         
         <div class="content-block">
             <div class="image-wrapper">
-                <img src="images/fire.jpg" alt="Bonfire">
+                <img src="https://images.unsplash.com/photo-1533575770077-052fa2c609fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bonfire">
             </div>
             <div class="text-wrapper">
                 <h2>Welcome to ikingi arts space</h2>
@@ -60,13 +60,13 @@
                 <p>Ikingi Arts is a creative space where Rwandan history, culture, and contemporary art come together through exhibitions, workshops, and storytelling.</p>
             </div>
             <div class="image-wrapper">
-                <img src="images/gallery_room.jpg" alt="Gallery Room">
+                <img src="https://images.unsplash.com/photo-1572947650440-e8a97ef053b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gallery Room">
             </div>
         </div>
 
         <div class="mosaic-section">
             <div class="basket-wrapper">
-                <img src="images/baskets.jpg" alt="Rwandan Baskets" class="main-basket-img">
+                <img src="https://images.unsplash.com/photo-1596263576926-250c60dae56b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Rwandan Baskets" class="main-basket-img">
                 
                 <div class="quote-box">
                     <p>“Art is not what you see, but what you make others feel — a quiet language that speaks when words fall short.”</p>
@@ -86,18 +86,18 @@
             <div class="gallery-viewport">
                 <div class="gallery-track" id="track">
                     <?php
-                    // PHP Array for Artworks
+                    // Live random art images
                     $artworks = [
-                        ['img' => 'art1.jpg', 'price' => '100'],
-                        ['img' => 'art2.jpg', 'price' => '250'],
-                        ['img' => 'art1.jpg', 'price' => '180'], // Duplicates for demo
-                        ['img' => 'art2.jpg', 'price' => '300'],
+                        ['img' => 'https://images.unsplash.com/photo-1579783902614-a3fb39279c15?auto=format&fit=crop&w=800&q=80', 'price' => '100'],
+                        ['img' => 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&w=800&q=80', 'price' => '250'],
+                        ['img' => 'https://images.unsplash.com/photo-1549887552-93f8efb0818e?auto=format&fit=crop&w=800&q=80', 'price' => '180'],
+                        ['img' => 'https://images.unsplash.com/photo-1578321272176-b7bbc0679853?auto=format&fit=crop&w=800&q=80', 'price' => '300'],
                     ];
 
                     foreach ($artworks as $art) {
                         echo "
                         <div class='art-card'>
-                            <img src='images/{$art['img']}'>
+                            <img src='{$art['img']}'>
                             <div class='price-tag'>£{$art['price']}</div>
                         </div>";
                     }
