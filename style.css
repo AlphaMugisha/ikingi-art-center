@@ -190,7 +190,120 @@ button, .btn-join, .btn-submit, .link-btn { cursor: pointer; transition: all 0.3
     .day { width: 100%; margin-bottom: 5px; }
     .gallery-viewport { width: 100%; overflow-x: scroll; } 
     .nav-arrow { display: none; }
-    .footer-content { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+    /* --- FIXED PROFESSIONAL FOOTER --- */
+.main-footer {
+    background-color: #111; /* Dark Black Background */
+    color: #b0b0b0; /* Light Grey Text */
+    padding-top: 60px;
+    font-family: 'Poppins', sans-serif;
+    border-top: 5px solid var(--yellow); /* Nice top border accent */
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    /* This creates 3 columns: Large, Small, Small */
+    grid-template-columns: 2fr 1fr 1fr; 
+    gap: 40px;
+    padding: 0 20px 40px 20px;
+}
+
+.footer-col h3 {
+    color: #fff;
+    font-family: 'Permanent Marker', cursive; /* Your brand font */
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.footer-col i {
+    color: var(--yellow);
+    width: 20px;
+    margin-right: 5px;
+}
+
+/* Links List Styling */
+.footer-links {
+    list-style: none; /* Removes the bullets */
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #b0b0b0;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--yellow);
+    transform: translateX(5px); /* Small slide effect on hover */
+}
+
+/* Social Icons Styling */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #222;
+    color: white;
+    border-radius: 50%; /* Makes them circular */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+}
+
+.social-icons a:hover {
+    background-color: var(--yellow);
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.social-icons i {
+    width: auto; /* Reset width for icons inside circles */
+    margin: 0;
+    color: inherit; /* Takes the color from the parent (a) */
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    border-top: 1px solid #222;
+}
+
+/* RESPONSIVE FIX FOR FOOTER */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Stack everything in 1 column on mobile */
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
     .social-icons { justify-content: center; }
     .cta-content h2 { font-size: 2.2rem; }
 }
