@@ -37,3 +37,19 @@ function toggleMenu() {
     nav.classList.toggle('active');
     burger.classList.toggle('active');
 }
+// ================= PRELOADER LOGIC =================
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        // Add the fade-out class to trigger the CSS transition
+        preloader.classList.add('fade-out');
+        
+        // Optional: Remove from DOM after transition ends to clear memory
+        setTimeout(() => {
+            preloader.remove();
+        }, 500); // Match the CSS transition duration (0.5s)
+    }
+});
+// ===================================================
+
+// ... keep your existing Scroll Reveal, FAQ, and Menu code below ...

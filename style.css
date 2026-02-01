@@ -116,21 +116,41 @@ body { font-family: 'Poppins', sans-serif; color: #333; overflow-x: hidden; scro
 .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s; color: #666; line-height: 1.6; }
 .faq-item.active .faq-answer { padding: 20px; max-height: 200px; }
 
-/* New: Footer/CTA/Team/Filter */
-.main-footer { background: #1a1a1a; color: #aaa; padding-top: 60px; font-size: 0.95rem; }
-.footer-content { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid #333; }
-.footer-col h3 { color: white; font-family: 'Permanent Marker', cursive; margin-bottom: 20px; letter-spacing: 1px; }
-.footer-about { line-height: 1.6; }
-.footer-links { list-style: none; }
-.footer-links li { margin-bottom: 10px; }
-.footer-links a { text-decoration: none; color: #aaa; transition: color 0.3s; }
-.footer-links a:hover { color: var(--yellow); padding-left: 5px; }
-.social-icons { display: flex; gap: 15px; margin-top: 20px; }
-.social-icons img { width: 24px; height: 24px; filter: invert(1); opacity: 0.7; transition: opacity 0.3s; }
-.social-icons img:hover { opacity: 1; }
-.footer-bottom { text-align: center; padding: 20px; background: #111; font-size: 0.85rem; }
-.footer-bottom a { color: #aaa; text-decoration: none; }
+/* --- NEW: Footer/CTA/Team/Filter (Placed Correctly) --- */
+.main-footer {
+    background-color: #111;
+    color: #b0b0b0;
+    padding-top: 60px;
+    font-family: 'Poppins', sans-serif;
+    border-top: 5px solid var(--yellow);
+}
 
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; 
+    gap: 40px;
+    padding: 0 20px 40px 20px;
+}
+
+.footer-col h3 { color: #fff; font-family: 'Permanent Marker', cursive; font-size: 1.5rem; margin-bottom: 20px; letter-spacing: 1px; }
+.footer-col p { line-height: 1.6; margin-bottom: 15px; font-size: 0.95rem; }
+.footer-col i { color: var(--yellow); width: 20px; margin-right: 5px; }
+
+.footer-links { list-style: none; padding: 0; }
+.footer-links li { margin-bottom: 12px; }
+.footer-links a { text-decoration: none; color: #b0b0b0; transition: all 0.3s ease; display: inline-block; }
+.footer-links a:hover { color: var(--yellow); transform: translateX(5px); }
+
+.social-icons { display: flex; gap: 15px; margin-top: 20px; }
+.social-icons a { display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; background-color: #222; color: white; border-radius: 50%; text-decoration: none; transition: all 0.3s ease; border: 1px solid #333; }
+.social-icons a:hover { background-color: var(--yellow); color: #000; transform: translateY(-3px); }
+.social-icons i { width: auto; margin: 0; color: inherit; }
+
+.footer-bottom { background-color: #000; text-align: center; padding: 20px; font-size: 0.85rem; border-top: 1px solid #222; }
+
+/* CTA & Team */
 .cta-banner { background: linear-gradient(135deg, var(--red), #c2185b); padding: 80px 20px; text-align: center; color: white; border-radius: 15px; margin-bottom: 100px; box-shadow: 0 20px 40px rgba(237, 28, 36, 0.3); }
 .cta-content h2 { font-family: 'Permanent Marker', cursive; font-size: 3rem; margin-bottom: 20px; }
 .cta-content p { max-width: 600px; margin: 0 auto 30px auto; font-size: 1.1rem; opacity: 0.9; }
@@ -156,12 +176,13 @@ button, .btn-join, .btn-submit, .link-btn { cursor: pointer; transition: all 0.3
 .image-wrapper img, .event-card img, .art-card img, .main-basket-img { transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 .image-wrapper:hover img, .event-card:hover img, .art-card:hover img, .basket-wrapper:hover .main-basket-img { transform: scale(1.03); }
 
-/* --- HAMBURGER MENU --- */
+/* --- HAMBURGER MENU (Hidden on Desktop) --- */
 .hamburger { display: none; cursor: pointer; }
 .bar { display: block; width: 25px; height: 3px; margin: 5px auto; transition: all 0.3s ease-in-out; background-color: #333; }
 
 /* --- RESPONSIVE MEDIA QUERIES --- */
 @media (max-width: 768px) {
+    /* Navbar */
     .hamburger { display: block; } 
     .hamburger.active .bar:nth-child(2) { opacity: 0; }
     .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
@@ -172,6 +193,7 @@ button, .btn-join, .btn-submit, .link-btn { cursor: pointer; transition: all 0.3
     .nav-links a { margin: 15px 0; display: block; font-size: 1.2rem; }
     .btn-join { margin: 10px auto; display: inline-block; }
 
+    /* Layout Adjustments */
     .hero-section { height: 500px; }
     .main-title { font-size: 2.5rem; letter-spacing: 1px; }
     .hero-subtitle { font-size: 1.1rem; padding: 0 20px; }
@@ -190,120 +212,85 @@ button, .btn-join, .btn-submit, .link-btn { cursor: pointer; transition: all 0.3
     .day { width: 100%; margin-bottom: 5px; }
     .gallery-viewport { width: 100%; overflow-x: scroll; } 
     .nav-arrow { display: none; }
-    /* --- FIXED PROFESSIONAL FOOTER --- */
-.main-footer {
-    background-color: #111; /* Dark Black Background */
-    color: #b0b0b0; /* Light Grey Text */
-    padding-top: 60px;
-    font-family: 'Poppins', sans-serif;
-    border-top: 5px solid var(--yellow); /* Nice top border accent */
-}
+    .cta-content h2 { font-size: 2.2rem; }
 
-.footer-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    /* This creates 3 columns: Large, Small, Small */
-    grid-template-columns: 2fr 1fr 1fr; 
-    gap: 40px;
-    padding: 0 20px 40px 20px;
-}
-
-.footer-col h3 {
-    color: #fff;
-    font-family: 'Permanent Marker', cursive; /* Your brand font */
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-.footer-col p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-    font-size: 0.95rem;
-}
-
-.footer-col i {
-    color: var(--yellow);
-    width: 20px;
-    margin-right: 5px;
-}
-
-/* Links List Styling */
-.footer-links {
-    list-style: none; /* Removes the bullets */
-    padding: 0;
-}
-
-.footer-links li {
-    margin-bottom: 12px;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: #b0b0b0;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.footer-links a:hover {
-    color: var(--yellow);
-    transform: translateX(5px); /* Small slide effect on hover */
-}
-
-/* Social Icons Styling */
-.social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: #222;
-    color: white;
-    border-radius: 50%; /* Makes them circular */
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: 1px solid #333;
-}
-
-.social-icons a:hover {
-    background-color: var(--yellow);
-    color: #000;
-    transform: translateY(-3px);
-}
-
-.social-icons i {
-    width: auto; /* Reset width for icons inside circles */
-    margin: 0;
-    color: inherit; /* Takes the color from the parent (a) */
-}
-
-/* Bottom Bar */
-.footer-bottom {
-    background-color: #000;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.85rem;
-    border-top: 1px solid #222;
-}
-
-/* RESPONSIVE FIX FOR FOOTER */
-@media (max-width: 768px) {
+    /* Footer Mobile Overrides */
     .footer-container {
         grid-template-columns: 1fr; /* Stack everything in 1 column on mobile */
         text-align: center;
     }
-    
     .social-icons {
         justify-content: center;
     }
 }
-    .social-icons { justify-content: center; }
-    .cta-content h2 { font-size: 2.2rem; }
+/* --- NAVBAR LOGO --- */
+.navbar-logo {
+    height: 60px; /* Adjust height as needed to fit nicely */
+    width: auto;
+    display: block;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+
+/* ================= CREATIVE PRELOADER STYLES ================= */
+.preloader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-bg); /* Use site's dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it sits on top of everything */
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+/* Class added by JS to hide the preloader */
+.preloader-container.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader-content {
+    position: relative;
+}
+
+.preloader-logo {
+    width: 150px; /* Larger size for the preloader */
+    height: auto;
+    /* The artistic animation */
+    animation: art-pulse 2.5s infinite ease-in-out;
+}
+
+/* Artistic Breathing & Pulsing Animation */
+@keyframes art-pulse {
+    0% {
+        transform: scale(0.95);
+        filter: brightness(0.9) drop-shadow(0 0 0 rgba(255, 200, 69, 0));
+    }
+    50% {
+        transform: scale(1.05) rotate(2deg); /* Subtle rotation for life */
+        filter: brightness(1.1) drop-shadow(0 0 20px rgba(255, 200, 69, 0.4)); /* Soft yellow glow */
+    }
+    100% {
+        transform: scale(0.95);
+        filter: brightness(0.9) drop-shadow(0 0 0 rgba(255, 200, 69, 0));
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 50px; /* Smaller on mobile */
+    }
+    .preloader-logo {
+        width: 120px;
+    }
 }
