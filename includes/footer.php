@@ -1,4 +1,5 @@
 <footer class="main-footer">
+   <link rel="stylesheet" href="assets/css/style.css">
     <div class="footer-wave">
         <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
             <path fill="#1a1a1a" fill-opacity="1"

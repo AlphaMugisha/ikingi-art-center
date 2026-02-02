@@ -399,108 +399,6 @@ p {
     z-index: 5;
 }
 
-/* --- ARTISTIC FOOTER --- */
-.main-footer {
-    background-color: #1a1a1a;
-    /* Dark background */
-    color: #fff;
-    position: relative;
-    margin-top: 150px;
-    /* Distance from content above */
-    padding-top: 150px;
-    /* Space inside for wave to sit */
-}
-
-/* The Wave Transition */
-.footer-wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    z-index: 1;
-}
-
-.footer-wave svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
-    /* Matches padding-top of footer approximately */
-}
-
-/* Ensure the fill matches the footer background exactly */
-.footer-wave path {
-    fill: #1a1a1a;
-}
-
-/* Footer Content Grid */
-.footer-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding: 0 20px 40px 20px;
-    position: relative;
-    z-index: 2;
-}
-
-.footer-col {
-    flex: 1;
-    min-width: 250px;
-}
-
-/* Brand Styles */
-.footer-logo {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.t-yellow {
-    color: var(--yellow);
-}
-
-.footer-col p {
-    color: #aaa;
-    line-height: 1.6;
-    font-size: 0.95rem;
-}
-
-/* Headings */
-.footer-col h3 {
-    font-family: 'Permanent Marker', cursive;
-    color: var(--yellow);
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-    letter-spacing: 1px;
-}
-
-/* Links */
-.footer-menu {
-    list-style: none;
-}
-
-.footer-menu li {
-    margin-bottom: 12px;
-}
-
-.footer-menu a {
-    text-decoration: none;
-    color: #ccc;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.footer-menu a:hover {
-    color: var(--green);
-    transform: translateX(10px);
-}
 
 /* Social Icons */
 .social-links {
@@ -915,5 +813,212 @@ p {
     .founder-img-wrapper::before {
         top: 10px;
         left: 10px;
+    }
+}
+/* =========================================
+   FOOTER STYLING (Production Ready)
+   ========================================= */
+
+/* 1. Main Footer Container */
+.main-footer {
+    position: relative;
+    background-color: #1a1a1a; /* Matches the SVG fill color in your HTML */
+    color: #a0a0a0;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 100px; /* Space for the wave to overlap */
+    padding-bottom: 20px;
+}
+
+/* 2. The Wave (Seamless Top) */
+.footer-wave {
+    position: absolute;
+    top: -150px; /* Pulls it up to overlap the previous section */
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+    z-index: 1; /* Sits behind content but above background */
+    pointer-events: none; /* Let clicks pass through if needed */
+}
+
+.footer-wave svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+/* 3. Grid Layout */
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Brand column is wider */
+    gap: 60px;
+    padding: 50px 8%;
+    position: relative;
+    z-index: 2; /* Content sits above the wave */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* 4. Column Styling */
+.footer-col h3 {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif; /* Consistent with your branding */
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Gold decorative dash under titles */
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 2px;
+    background-color: #FDB913; /* Accent Yellow */
+    transition: width 0.3s ease;
+}
+
+.footer-col:hover h3::after {
+    width: 100%; /* Expands on hover */
+}
+
+.brand-col p {
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+    max-width: 350px;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.t-yellow { color: #FDB913; }
+
+/* 5. Interactive Social Icons */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects for Socials */
+.social-icon:hover {
+    background: #FDB913;
+    border-color: #FDB913;
+    color: #1a1a1a;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(253, 185, 19, 0.3);
+}
+
+.social-icon:hover svg {
+    transform: rotate(15deg); /* Playful tilt */
+}
+
+/* 6. Footer Links (Animated Underline) */
+.footer-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 12px;
+}
+
+.footer-menu a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.footer-menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #FDB913;
+    transition: width 0.3s ease-in-out;
+}
+
+.footer-menu a:hover {
+    color: #ffffff;
+    transform: translateX(5px); /* Slide right slightly */
+}
+
+.footer-menu a:hover::before {
+    width: 100%;
+}
+
+/* 7. Footer Bottom (Copyright) */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* 8. Responsive Design */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    .brand-col {
+        grid-column: span 2; /* Brand takes full width on tablets */
+        text-align: center;
+    }
+    .brand-col p {
+        margin: 0 auto 30px auto;
+    }
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Stack everything on mobile */
+        text-align: center;
+    }
+    .brand-col {
+        grid-column: span 1;
+    }
+    .footer-col h3::after {
+        left: 50%;
+        transform: translateX(-50%); /* Center the decorative line */
+    }
+    .footer-menu a:hover {
+        transform: translateX(0); /* Disable shift on mobile for better UX */
     }
 }
