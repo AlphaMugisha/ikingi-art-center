@@ -1,5 +1,6 @@
 <footer class="main-footer">
-   <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
     <div class="footer-wave">
         <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
             <path fill="#1a1a1a" fill-opacity="1"
@@ -45,7 +46,7 @@
                 <li><a href="programs.php">Programs & Workshops</a></li>
                 <li><a href="about.php">Our Story</a></li>
                 <li><a href="contact.php">Visit Us</a></li>
-                 <li><a href="../admin/dashboard.php">Admin login</a></li>
+                <li><a href="admin/login.php">Admin Login</a></li>
             </ul>
         </div>
 

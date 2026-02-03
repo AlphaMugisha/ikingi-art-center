@@ -1,9 +1,20 @@
 <?php
-$user = 'root';
 $host = 'localhost';
-$pass = '';
-$db = 'inkingi_db';
+$db   = 'inkingi_db';
+$user = 'root';
+$pass = ''; // Default XAMPP password is empty
+$charset = 'utf8mb4';
 
-$conn = mysqli_connect($host , $user , $pass , $db);
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
 
+try {
+    $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (\PDOException $e) {
+    die("<h1>Database Connection Failed</h1><p>" . $e->getMessage() . "</p>");
+}
 ?>
