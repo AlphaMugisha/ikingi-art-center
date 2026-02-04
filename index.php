@@ -316,6 +316,19 @@
             .event-date .day { font-size: 1.5rem; }
             .hero-progress-container { bottom: 140px; }
         }
+       .founder {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Snappy, "bouncy" feel */
+    transform: perspective(1000px) rotateY(0deg) scale(1);
+    border-radius: 8px; /* Optional: smooths the corners */
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+.founder:hover {
+    cursor: pointer;
+    transform: perspective(1000px) rotatex(5deg) rotateY(5deg)  scale(1.18); 
+    box-shadow: 0px 15px 35px rgba(253, 185, 19, 0.4); 
+}
     </style>
 </head>
 
@@ -451,16 +464,16 @@
                 <div class="content-row" style="margin-bottom: 0; align-items: flex-start;">
                     <div class="image-col stagger-1" style="flex: 0 0 350px;">
                         <div style="position: relative;">
-                             <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&q=80" alt="Sarah Uwera" style="width: 100%; border-radius: 20px; border: 5px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+                             <img src="https://miro.medium.com/v2/1*0IWFbOo0PXroBB_gIm9Iew.jpeg" alt="Sarah Uwera" style="width: 100%; border-radius: 20px; border: 5px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.2);" class="founder">
                              <div style="position: absolute; bottom: -20px; right: -20px; background: var(--accent-yellow); color: var(--primary); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fas fa-quote-right"></i></div>
                         </div>
                     </div>
                     <div class="text-col stagger-2">
                         <span class="section-subtitle" style="color: rgba(255,255,255,0.7);">Meet The Creative Director</span>
-                        <h2 style="color: white; margin-bottom: 20px;">Sarah Uwera</h2>
+                        <h2 style="color: white; margin-bottom: 20px;">Olivier <span?>Kwitonda</span></h2>
                         <p style="color: rgba(255,255,255,0.9); font-style: italic; font-size: 1.3rem; font-weight: 300; line-height: 1.6;">"I created Ikingi to be a home. A place where the walls talk through color and the people connect through culture. We are not just a gallery; we are a movement."</p>
                         <div class="stagger-3" style="margin-top: 30px;">
-                             <img src="assets/images/signature.png" alt="Signature" style="height: 60px; filter: invert(1); opacity: 0.8;">
+                             
                         </div>
                     </div>
                 </div>
