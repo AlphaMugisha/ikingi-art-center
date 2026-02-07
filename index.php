@@ -203,7 +203,7 @@
             color: white; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; transition: var(--transition-soft);
             position: relative;
         }
-        .nav-links a::after {
+        .nav-links a:a:after {
             content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--accent-yellow); transition: width 0.3s ease;
         }
         .nav-links a:hover::after { width: 100%; }
